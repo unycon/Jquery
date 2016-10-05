@@ -1,4 +1,4 @@
-function rv_is_numdash(){
+function _is_numdash(){
 	var args = Array.prototype.slice.call( arguments, 0 );
 		args.map( function(){ return $.trim( $(this) );} );
 		str = match_phone = $.trim( args.join("") );
@@ -9,7 +9,7 @@ function rv_is_numdash(){
 	return str;
 }
 
-function rv_is_email(email){
+function _is_email(email){
 	email  = $.trim(email);
 	var regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 	if( !email || email == "" ){ return false; }
@@ -17,7 +17,7 @@ function rv_is_email(email){
 	return email;
 }
 
-function rv_is_phone(){
+function _is_phone(){
 	var args = Array.prototype.slice.call( arguments, 0 );
 		args.map( function(){ return $.trim( $(this) );} );
 		phone = match_phone = $.trim( args.join("") );
